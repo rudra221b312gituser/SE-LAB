@@ -1,0 +1,103 @@
+**Software Requirements Specification (SRS)**
+
+# 1. Introduction
+
+## 1.1 Purpose
+The purpose of this Software Requirements Specification (SRS) is to define the requirements for the Video Conferencing App/Web. This document provides a detailed description of the system's features, functionalities, and performance criteria to serve as a reference for developers and stakeholders.
+
+## 1.2 Scope
+The Video Conferencing App/Web is an enterprise-level communication platform that offers real-time video, audio, chat, whiteboarding, and document co-editing. It includes AI-driven functionalities like a mock interview generator and a text-to-PDF converter to enhance collaboration and productivity.
+
+## 1.3 Definitions, Acronyms, and Abbreviations
+- **WebRTC**: Web Real-Time Communication
+- **WebSocket**: Protocol for real-time data transfer
+- **SRS**: Software Requirement Specification
+- **UI**: User Interface
+- **Auth0/Clerk**: Authentication services
+
+## 1.4 References
+- IEEE 830-1998 SRS Standard
+- Lab-1 Synopsis Document
+- Lab-2 Project Narrative Document
+
+## 1.5 Overview
+This document outlines the system’s features, external interfaces, constraints, and other non-functional requirements necessary for successful implementation.
+
+# 2. Overall Description
+
+## 2.1 Product Perspective
+The Video Conferencing App/Web is designed as a competitive enterprise solution, offering advanced security and collaboration tools. It functions as a standalone platform to facilitate seamless virtual meetings and professional interactions.
+
+### System Architecture:
+- **Frontend**: Next.js, ReactJS, Tailwind CSS
+- **Backend**: Node.js with WebRTC and WebSocket
+- **Database**: MongoDB
+- **Authentication**: Auth0/Clerk
+- **Messaging & Video**: Stream integration
+
+## 2.2 Product Features
+- Real-time video and audio conferencing
+- Instant messaging and chat functionality
+- Real-time whiteboarding
+- Document co-editing
+- AI-powered mock interview generator
+- Text-to-PDF conversion
+
+## 2.3 User Classes and Characteristics
+- **Enterprise Professionals**: Secure, high-quality communication tools
+- **Educational Institutions**: Interactive virtual classrooms
+- **General Users**: Basic video conferencing needs
+
+## 2.4 Operating Environment
+- Web-based application compatible with Chrome, Firefox, and Safari
+- Optimized for desktops, tablets, and mobile devices
+
+## 2.5 Design and Implementation Constraints
+- Built using Next.js, ReactJS, and Tailwind CSS
+- Secure authentication via Auth0/Clerk
+- Real-time communication powered by WebRTC and WebSocket
+
+## 2.6 Assumptions and Dependencies
+- Stable internet connection required for optimal performance
+- Browser support for WebRTC
+
+# 3. Specific Requirements
+
+## 3.1 Functional Requirements
+
+| ID  | Requirement Description |
+|----|-------------------------|
+| FR-1 | The system shall support real-time video and audio conferencing. |
+| FR-2 | The system shall allow users to send and receive instant messages. |
+| FR-3 | The system shall enable real-time whiteboarding for collaboration. |
+| FR-4 | The system shall support document co-editing in real-time. |
+| FR-5 | The system shall include a GenAI feature for mock interview generation. |
+| FR-6 | The system shall provide text-to-PDF conversion functionality. |
+
+## 3.2 External Interface Requirements
+
+### 3.2.1 User Interfaces
+- Intuitive dashboards for meeting management
+
+### 3.2.2 Hardware Interfaces
+- Compatible with webcams, microphones, and speakers
+
+### 3.2.3 Software Interfaces
+- Stream API for messaging and video
+- MongoDB for data storage
+- OAuth2 for authentication
+
+## 3.3 Non-Functional Requirements
+
+| Category | Requirement |
+|----------|------------|
+| Security | Ensure encrypted communication for privacy. |
+| Performance | Support up to 500 concurrent users per meeting. |
+| Availability | Maintain system uptime of 99.9% annually. |
+| Usability | Provide a responsive UI across all devices. |
+| Maintainability | Implement a modular architecture for scalability. |
+
+## 3.4 Other Requirements
+- Compliance with data protection policies
+- Regular system backups for data integrity
+

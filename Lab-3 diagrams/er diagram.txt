@@ -1,0 +1,70 @@
+Entities:
+1. User
+   - UserID (PK)
+   - Name
+   - Email
+   - Password
+   - Role
+
+2. Meeting
+   - MeetingID (PK)
+   - HostID (FK to User)
+   - Title
+   - StartTime
+   - EndTime
+
+3. Participant
+   - ParticipantID (PK)
+   - UserID (FK to User)
+   - UserID (FK to User)
+
+4. Message
+   - MessageID (PK)
+   - MeetingID (FK to Meeting)
+   - SenderID (FK to User)
+   - Timestamp
+   - Content
+
+5. Whiteboard
+   - WhiteboardID (PK)
+   - MeetingID (FK to Meeting)
+   - Content
+
+6. Document
+   - DocumentID (PK)
+   - MeetingID (FK to Meeting)
+   - Title
+   - Content
+
+Relationships:
+- User participates in Meeting (one-to-many)
+- User sends Message in Meeting (one-to-many)
+- Meeting has Participants (many-to-many)
+- Meeting has Messages (one-to-many)
+- Meeting has Whiteboard (one-to-one)
+- Meeting has Documents (one-to-many)
+
+
+
+
+
+
+
+
+
+
+To visualize this in an ER diagram:
+
+User entity is linked to the Meeting entity through the HostID attribute.
+
+Participant entity forms a many-to-many relationship between User and Meeting.
+
+Message entity has a one-to-many relationship with Meeting and User (Sender).
+
+Whiteboard entity has a one-to-one relationship with Meeting.
+
+Document entity has a one-to-many relationship with Meeting.
+
+This overview should help you in creating the ER diagram in any tool like Visual Paradigm. Let me know if you need any further assistance!
+
+
